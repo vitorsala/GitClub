@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+class GitManager{
+    static let sharedInstance : GitManager = GitManager()
+    private init(){}
+
+    
+}

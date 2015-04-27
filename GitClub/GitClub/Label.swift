@@ -1,5 +1,5 @@
 //
-//  Project.swift
+//  Label.swift
 //  GitClub
 //
 //  Created by Vitor Kawai Sala on 27/04/15.
@@ -9,10 +9,9 @@
 import Foundation
 import CoreData
 
-class Project: NSManagedObject {
+class Label: NSManagedObject {
 
     @NSManaged var name: String
-    @NSManaged var hasChallenge: NSSet
-    @NSManaged var partOfUser: NSManagedObject
+    @NSManaged var partOfChallenge: NSSet
 
 }
