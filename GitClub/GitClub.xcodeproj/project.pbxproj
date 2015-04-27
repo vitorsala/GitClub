@@ -18,10 +18,10 @@
 		EB5E9D521AEE9FD8008672E6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB5E9D511AEE9FD8008672E6 /* Images.xcassets */; };
 		EB5E9D551AEE9FD8008672E6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB5E9D531AEE9FD8008672E6 /* LaunchScreen.xib */; };
 		EB5E9D611AEE9FD8008672E6 /* GitClubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5E9D601AEE9FD8008672E6 /* GitClubTests.swift */; };
-		EB7FC1EB1AEEC51200F252C9 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FC1EA1AEEC51200F252C9 /* Challenge.swift */; };
-		EB7FC1ED1AEEC51300F252C9 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FC1EC1AEEC51300F252C9 /* Label.swift */; };
-		EB7FC1EF1AEEC51300F252C9 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FC1EE1AEEC51300F252C9 /* Project.swift */; };
-		EB7FC1F11AEEC51300F252C9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FC1F01AEEC51300F252C9 /* User.swift */; };
+		EB7FC1F31AEECE0200F252C9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FC1F21AEECE0200F252C9 /* User.swift */; };
+		EB7FC1F51AEECE0300F252C9 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FC1F41AEECE0300F252C9 /* Project.swift */; };
+		EB7FC1F71AEECE0300F252C9 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FC1F61AEECE0300F252C9 /* Challenge.swift */; };
+		EB7FC1F91AEECE0300F252C9 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FC1F81AEECE0300F252C9 /* Label.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,10 +50,10 @@
 		EB5E9D5A1AEE9FD8008672E6 /* GitClubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitClubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB5E9D5F1AEE9FD8008672E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB5E9D601AEE9FD8008672E6 /* GitClubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitClubTests.swift; sourceTree = "<group>"; };
-		EB7FC1EA1AEEC51200F252C9 /* Challenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
-		EB7FC1EC1AEEC51300F252C9 /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
-		EB7FC1EE1AEEC51300F252C9 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
-		EB7FC1F01AEEC51300F252C9 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EB7FC1F21AEECE0200F252C9 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EB7FC1F41AEECE0300F252C9 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		EB7FC1F61AEECE0300F252C9 /* Challenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
+		EB7FC1F81AEECE0300F252C9 /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,10 +95,10 @@
 		EB5E9D441AEE9FD8008672E6 /* GitClub */ = {
 			isa = PBXGroup;
 			children = (
-				EB7FC1F01AEEC51300F252C9 /* User.swift */,
-				EB7FC1EE1AEEC51300F252C9 /* Project.swift */,
-				EB7FC1EC1AEEC51300F252C9 /* Label.swift */,
-				EB7FC1EA1AEEC51200F252C9 /* Challenge.swift */,
+				EB7FC1F81AEECE0300F252C9 /* Label.swift */,
+				EB7FC1F61AEECE0300F252C9 /* Challenge.swift */,
+				EB7FC1F41AEECE0300F252C9 /* Project.swift */,
+				EB7FC1F21AEECE0200F252C9 /* User.swift */,
 				EB5E9D471AEE9FD8008672E6 /* AppDelegate.swift */,
 				17B45E191AEEAF290019685D /* GitManager.swift */,
 				17B45E1B1AEEAF3B0019685D /* Persistence.swift */,
@@ -242,14 +242,14 @@
 				17B45E1E1AEEB0160019685D /* ProjectViewController.swift in Sources */,
 				17B45E1C1AEEAF3B0019685D /* Persistence.swift in Sources */,
 				EB5E9D4D1AEE9FD8008672E6 /* MainViewController.swift in Sources */,
-				EB7FC1EF1AEEC51300F252C9 /* Project.swift in Sources */,
 				17B45E201AEEB0610019685D /* UserViewController.swift in Sources */,
+				EB7FC1F91AEECE0300F252C9 /* Label.swift in Sources */,
+				EB7FC1F31AEECE0200F252C9 /* User.swift in Sources */,
 				17B45E1A1AEEAF290019685D /* GitManager.swift in Sources */,
-				EB7FC1ED1AEEC51300F252C9 /* Label.swift in Sources */,
-				EB7FC1EB1AEEC51200F252C9 /* Challenge.swift in Sources */,
 				EB5E9D4B1AEE9FD8008672E6 /* GitClub.xcdatamodeld in Sources */,
 				EB5E9D481AEE9FD8008672E6 /* AppDelegate.swift in Sources */,
-				EB7FC1F11AEEC51300F252C9 /* User.swift in Sources */,
+				EB7FC1F51AEECE0300F252C9 /* Project.swift in Sources */,
+				EB7FC1F71AEECE0300F252C9 /* Challenge.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

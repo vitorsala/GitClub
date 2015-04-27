@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14D136" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Challenge" representedClassName="PRODUCT_MODULE_NAME.Challenge" syncable="YES">
-        <attribute name="challengeDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="challengeDescription" attributeType="String" syncable="YES"/>
         <relationship name="hasLabel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Label" inverseName="partOfChallenge" inverseEntity="Label" syncable="YES"/>
         <relationship name="partOfProject" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Project" inverseName="hasChallenge" inverseEntity="Project" syncable="YES"/>
     </entity>
     <entity name="Label" representedClassName="PRODUCT_MODULE_NAME.Label" syncable="YES">
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
         <relationship name="partOfChallenge" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Challenge" inverseName="hasLabel" inverseEntity="Challenge" syncable="YES"/>
     </entity>
     <entity name="Project" representedClassName="PRODUCT_MODULE_NAME.Project" syncable="YES">
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="hasChallenge" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Challenge" inverseName="partOfProject" inverseEntity="Challenge" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <relationship name="hasChallenge" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Challenge" inverseName="partOfProject" inverseEntity="Challenge" syncable="YES"/>
         <relationship name="partOfUser" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="hasProject" inverseEntity="User" syncable="YES"/>
     </entity>
     <entity name="User" representedClassName="PRODUCT_MODULE_NAME.User" syncable="YES">
-        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="hasProject" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Project" inverseName="partOfUser" inverseEntity="Project" syncable="YES"/>
+        <attribute name="username" attributeType="String" syncable="YES"/>
+        <relationship name="hasProject" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Project" inverseName="partOfUser" inverseEntity="Project" syncable="YES"/>
     </entity>
     <elements>
         <element name="User" positionX="-189" positionY="-954" width="126" height="73"/>

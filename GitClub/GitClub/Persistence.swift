@@ -13,6 +13,29 @@ class Persistence{
     static let sharedInstance : Persistence = Persistence()
     private init(){}
 
+
+    func fetchData(entity : String, predicate : NSPredicate) -> Array<NSManagedObject>?{
+
+        let request = NSFetchRequest()
+        request.predicate = predicate
+
+        let description = NSEntityDescription.entityForName(entity, inManagedObjectContext: self.managedObjectContext!)
+
+        request.entity?.description
+
+        var error : NSError?
+
+        var resultSet : NSArray = self.managedObjectContext!.executeFetchRequest(request, error: &error) as! NSArray
+
+
+        if((error) != nil){
+            println("Error \(error?.code): \(error?.description)");
+            return nil
+        }
+
+        return resultSet;
+    }
+
     // MARK: - Core Data stack
 
     lazy var applicationDocumentsDirectory: NSURL = {

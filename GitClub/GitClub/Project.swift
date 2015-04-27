@@ -13,6 +13,6 @@ class Project: NSManagedObject {
 
     @NSManaged var name: String
     @NSManaged var hasChallenge: NSSet
-    @NSManaged var partOfUser: NSManagedObject
+    @NSManaged var partOfUser: User
 
 }

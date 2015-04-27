@@ -12,7 +12,7 @@ import CoreData
 class Challenge: NSManagedObject {
 
     @NSManaged var challengeDescription: String
-    @NSManaged var partOfProject: NSManagedObject
-    @NSManaged var hasLabel: NSManagedObject
+    @NSManaged var partOfProject: Project
+    @NSManaged var hasLabel: Label
 
 }
