@@ -7,9 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17B45E121AEEAED70019685D /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B45E111AEEAED70019685D /* Project.swift */; };
+		17B45E141AEEAEFB0019685D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B45E131AEEAEFB0019685D /* User.swift */; };
+		17B45E161AEEAF0A0019685D /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B45E151AEEAF0A0019685D /* Challenge.swift */; };
+		17B45E181AEEAF160019685D /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B45E171AEEAF160019685D /* Label.swift */; };
+		17B45E1A1AEEAF290019685D /* GitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B45E191AEEAF290019685D /* GitManager.swift */; };
+		17B45E1C1AEEAF3B0019685D /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B45E1B1AEEAF3B0019685D /* Persistence.swift */; };
+		17B45E1E1AEEB0160019685D /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B45E1D1AEEB0160019685D /* ProjectViewController.swift */; };
+		17B45E201AEEB0610019685D /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B45E1F1AEEB0610019685D /* UserViewController.swift */; };
 		EB5E9D481AEE9FD8008672E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5E9D471AEE9FD8008672E6 /* AppDelegate.swift */; };
 		EB5E9D4B1AEE9FD8008672E6 /* GitClub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EB5E9D491AEE9FD8008672E6 /* GitClub.xcdatamodeld */; };
-		EB5E9D4D1AEE9FD8008672E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5E9D4C1AEE9FD8008672E6 /* ViewController.swift */; };
+		EB5E9D4D1AEE9FD8008672E6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5E9D4C1AEE9FD8008672E6 /* MainViewController.swift */; };
 		EB5E9D501AEE9FD8008672E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB5E9D4E1AEE9FD8008672E6 /* Main.storyboard */; };
 		EB5E9D521AEE9FD8008672E6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB5E9D511AEE9FD8008672E6 /* Images.xcassets */; };
 		EB5E9D551AEE9FD8008672E6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB5E9D531AEE9FD8008672E6 /* LaunchScreen.xib */; };
@@ -27,11 +35,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17B45E111AEEAED70019685D /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		17B45E131AEEAEFB0019685D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = ../User.swift; sourceTree = "<group>"; };
+		17B45E151AEEAF0A0019685D /* Challenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Challenge.swift; path = ../Challenge.swift; sourceTree = "<group>"; };
+		17B45E171AEEAF160019685D /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Label.swift; path = ../Label.swift; sourceTree = "<group>"; };
+		17B45E191AEEAF290019685D /* GitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitManager.swift; sourceTree = "<group>"; };
+		17B45E1B1AEEAF3B0019685D /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		17B45E1D1AEEB0160019685D /* ProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
+		17B45E1F1AEEB0610019685D /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		EB5E9D421AEE9FD8008672E6 /* GitClub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitClub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB5E9D461AEE9FD8008672E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB5E9D471AEE9FD8008672E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB5E9D4A1AEE9FD8008672E6 /* GitClub.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GitClub.xcdatamodel; sourceTree = "<group>"; };
-		EB5E9D4C1AEE9FD8008672E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EB5E9D4C1AEE9FD8008672E6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		EB5E9D4F1AEE9FD8008672E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EB5E9D511AEE9FD8008672E6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EB5E9D541AEE9FD8008672E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -80,7 +96,15 @@
 			isa = PBXGroup;
 			children = (
 				EB5E9D471AEE9FD8008672E6 /* AppDelegate.swift */,
-				EB5E9D4C1AEE9FD8008672E6 /* ViewController.swift */,
+				17B45E151AEEAF0A0019685D /* Challenge.swift */,
+				17B45E191AEEAF290019685D /* GitManager.swift */,
+				17B45E171AEEAF160019685D /* Label.swift */,
+				17B45E1B1AEEAF3B0019685D /* Persistence.swift */,
+				17B45E111AEEAED70019685D /* Project.swift */,
+				17B45E1D1AEEB0160019685D /* ProjectViewController.swift */,
+				17B45E131AEEAEFB0019685D /* User.swift */,
+				17B45E1F1AEEB0610019685D /* UserViewController.swift */,
+				EB5E9D4C1AEE9FD8008672E6 /* MainViewController.swift */,
 				EB5E9D4E1AEE9FD8008672E6 /* Main.storyboard */,
 				EB5E9D511AEE9FD8008672E6 /* Images.xcassets */,
 				EB5E9D531AEE9FD8008672E6 /* LaunchScreen.xib */,
@@ -215,9 +239,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB5E9D4D1AEE9FD8008672E6 /* ViewController.swift in Sources */,
+				17B45E1E1AEEB0160019685D /* ProjectViewController.swift in Sources */,
+				17B45E1C1AEEAF3B0019685D /* Persistence.swift in Sources */,
+				EB5E9D4D1AEE9FD8008672E6 /* MainViewController.swift in Sources */,
+				17B45E201AEEB0610019685D /* UserViewController.swift in Sources */,
+				17B45E161AEEAF0A0019685D /* Challenge.swift in Sources */,
+				17B45E1A1AEEAF290019685D /* GitManager.swift in Sources */,
 				EB5E9D4B1AEE9FD8008672E6 /* GitClub.xcdatamodeld in Sources */,
 				EB5E9D481AEE9FD8008672E6 /* AppDelegate.swift in Sources */,
+				17B45E141AEEAEFB0019685D /* User.swift in Sources */,
+				17B45E181AEEAF160019685D /* Label.swift in Sources */,
+				17B45E121AEEAED70019685D /* Project.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +447,7 @@
 				EB5E9D661AEE9FD8008672E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EB5E9D671AEE9FD8008672E6 /* Build configuration list for PBXNativeTarget "GitClubTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +456,7 @@
 				EB5E9D691AEE9FD8008672E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
