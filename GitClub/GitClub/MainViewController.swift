@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class MainViewController: UIViewController {
 
@@ -33,16 +34,7 @@ class MainViewController: UIViewController {
         
         self.presentViewController (alertController, animated: true, completion: nil)
 
-        let per = Persistence.sharedInstance
-        let u = User()
-        u.username = "ximporinfola"
-        per.saveContext()
-
-
-        let r = per.fetchData("User", predicate: NSPredicate(format: "TRUEPREDICATE"))
-        for blablabla in r{
-            println((blablabla as! User).username)
-        }
+      
     }
 
     override func didReceiveMemoryWarning() {
