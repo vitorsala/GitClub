@@ -13,8 +13,7 @@ class Persistence{
     static let sharedInstance : Persistence = Persistence()
     private init(){}
 
-
-    func fetchData(entity : String, predicate : NSPredicate) -> Array<NSManagedObject>?{
+    func fetchData(entity : String, predicate : NSPredicate) -> Array<AnyObject>{
 
         let request = NSFetchRequest()
         request.predicate = predicate
@@ -25,12 +24,12 @@ class Persistence{
 
         var error : NSError?
 
-        var resultSet : NSArray = self.managedObjectContext!.executeFetchRequest(request, error: &error) as! NSArray
+        var resultSet : Array = self.managedObjectContext!.executeFetchRequest(request, error: &error)!
 
 
         if((error) != nil){
             println("Error \(error?.code): \(error?.description)");
-            return nil
+            return []
         }
 
         return resultSet;
@@ -55,6 +54,8 @@ class Persistence{
         // Create the coordinator and store
         var coordinator: NSPersistentStoreCoordinator? = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
         let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("GitClub.sqlite")
+        
+
         var error: NSError? = nil
         var failureReason = "There was an error creating or loading the application's saved data."
         if coordinator!.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil, error: &error) == nil {

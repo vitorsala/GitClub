@@ -13,5 +13,4 @@ class User: NSManagedObject {
 
     @NSManaged var username: String
     @NSManaged var hasProject: NSSet
-
 }
