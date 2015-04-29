@@ -17,7 +17,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
 
         let manager = GitManager.sharedInstance
-        manager.getUserInfo("vitorsala")
+        manager.getUserInfo("joaooomarcos")
         
         var userDefault = NSUserDefaults()
         
