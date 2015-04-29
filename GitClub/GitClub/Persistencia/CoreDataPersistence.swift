@@ -9,23 +9,18 @@
 import Foundation
 import CoreData
 
-class Persistence{
-    static let sharedInstance : Persistence = Persistence()
+class CoreDataPersistence{
+    static let sharedInstance : CoreDataPersistence = CoreDataPersistence()
     private init(){}
 
-    func fetchData(entity : String, predicate : NSPredicate) -> Array<AnyObject>{
+    func fetchData(entityName : String, predicate : NSPredicate) -> Array<AnyObject>{
 
-        let request = NSFetchRequest()
+        var request = NSFetchRequest(entityName: entityName)
         request.predicate = predicate
-
-        let description = NSEntityDescription.entityForName(entity, inManagedObjectContext: self.managedObjectContext!)
-
-        request.entity?.description
 
         var error : NSError?
 
         var resultSet : Array = self.managedObjectContext!.executeFetchRequest(request, error: &error)!
-
 
         if((error) != nil){
             println("Error \(error?.code): \(error?.description)");
@@ -54,7 +49,8 @@ class Persistence{
         // Create the coordinator and store
         var coordinator: NSPersistentStoreCoordinator? = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
         let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("GitClub.sqlite")
-        
+
+        println(url)
 
         var error: NSError? = nil
         var failureReason = "There was an error creating or loading the application's saved data."

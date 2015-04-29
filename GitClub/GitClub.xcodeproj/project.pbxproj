@@ -8,9 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		17B45E1A1AEEAF290019685D /* GitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B45E191AEEAF290019685D /* GitManager.swift */; };
-		17B45E1C1AEEAF3B0019685D /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B45E1B1AEEAF3B0019685D /* Persistence.swift */; };
 		17B45E1E1AEEB0160019685D /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B45E1D1AEEB0160019685D /* ProjectViewController.swift */; };
-		17B45E201AEEB0610019685D /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B45E1F1AEEB0610019685D /* UserViewController.swift */; };
+		EB08726C1AF02387001E90CA /* CoreDataPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB08726B1AF02387001E90CA /* CoreDataPersistence.swift */; };
+		EB242EA91AEFFC2D0065214F /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB242EA81AEFFC2D0065214F /* Challenge.swift */; };
+		EB242EAB1AEFFC2D0065214F /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB242EAA1AEFFC2D0065214F /* Label.swift */; };
+		EB242EAD1AEFFC2D0065214F /* GitUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB242EAC1AEFFC2D0065214F /* GitUser.swift */; };
+		EB242EAF1AEFFC2D0065214F /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB242EAE1AEFFC2D0065214F /* Project.swift */; };
 		EB5E9D481AEE9FD8008672E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5E9D471AEE9FD8008672E6 /* AppDelegate.swift */; };
 		EB5E9D4B1AEE9FD8008672E6 /* GitClub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EB5E9D491AEE9FD8008672E6 /* GitClub.xcdatamodeld */; };
 		EB5E9D4D1AEE9FD8008672E6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5E9D4C1AEE9FD8008672E6 /* MainViewController.swift */; };
@@ -18,10 +21,6 @@
 		EB5E9D521AEE9FD8008672E6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB5E9D511AEE9FD8008672E6 /* Images.xcassets */; };
 		EB5E9D551AEE9FD8008672E6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB5E9D531AEE9FD8008672E6 /* LaunchScreen.xib */; };
 		EB5E9D611AEE9FD8008672E6 /* GitClubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5E9D601AEE9FD8008672E6 /* GitClubTests.swift */; };
-		EB7FC1F31AEECE0200F252C9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FC1F21AEECE0200F252C9 /* User.swift */; };
-		EB7FC1F51AEECE0300F252C9 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FC1F41AEECE0300F252C9 /* Project.swift */; };
-		EB7FC1F71AEECE0300F252C9 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FC1F61AEECE0300F252C9 /* Challenge.swift */; };
-		EB7FC1F91AEECE0300F252C9 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FC1F81AEECE0300F252C9 /* Label.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,9 +35,12 @@
 
 /* Begin PBXFileReference section */
 		17B45E191AEEAF290019685D /* GitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitManager.swift; sourceTree = "<group>"; };
-		17B45E1B1AEEAF3B0019685D /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		17B45E1D1AEEB0160019685D /* ProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
-		17B45E1F1AEEB0610019685D /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		EB08726B1AF02387001E90CA /* CoreDataPersistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataPersistence.swift; path = Persistencia/CoreDataPersistence.swift; sourceTree = "<group>"; };
+		EB242EA81AEFFC2D0065214F /* Challenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
+		EB242EAA1AEFFC2D0065214F /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		EB242EAC1AEFFC2D0065214F /* GitUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitUser.swift; sourceTree = "<group>"; };
+		EB242EAE1AEFFC2D0065214F /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		EB5E9D421AEE9FD8008672E6 /* GitClub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitClub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB5E9D461AEE9FD8008672E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB5E9D471AEE9FD8008672E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,10 +52,6 @@
 		EB5E9D5A1AEE9FD8008672E6 /* GitClubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitClubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB5E9D5F1AEE9FD8008672E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB5E9D601AEE9FD8008672E6 /* GitClubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitClubTests.swift; sourceTree = "<group>"; };
-		EB7FC1F21AEECE0200F252C9 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		EB7FC1F41AEECE0300F252C9 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
-		EB7FC1F61AEECE0300F252C9 /* Challenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
-		EB7FC1F81AEECE0300F252C9 /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +72,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB08726D1AF0238C001E90CA /* Persistencia */ = {
+			isa = PBXGroup;
+			children = (
+				EB08726B1AF02387001E90CA /* CoreDataPersistence.swift */,
+			);
+			name = Persistencia;
+			sourceTree = "<group>";
+		};
 		EB5E9D391AEE9FD8008672E6 = {
 			isa = PBXGroup;
 			children = (
@@ -95,20 +101,16 @@
 		EB5E9D441AEE9FD8008672E6 /* GitClub */ = {
 			isa = PBXGroup;
 			children = (
-				EB7FC1F81AEECE0300F252C9 /* Label.swift */,
-				EB7FC1F61AEECE0300F252C9 /* Challenge.swift */,
-				EB7FC1F41AEECE0300F252C9 /* Project.swift */,
-				EB7FC1F21AEECE0200F252C9 /* User.swift */,
 				EB5E9D471AEE9FD8008672E6 /* AppDelegate.swift */,
 				17B45E191AEEAF290019685D /* GitManager.swift */,
-				17B45E1B1AEEAF3B0019685D /* Persistence.swift */,
 				17B45E1D1AEEB0160019685D /* ProjectViewController.swift */,
-				17B45E1F1AEEB0610019685D /* UserViewController.swift */,
 				EB5E9D4C1AEE9FD8008672E6 /* MainViewController.swift */,
 				EB5E9D4E1AEE9FD8008672E6 /* Main.storyboard */,
 				EB5E9D511AEE9FD8008672E6 /* Images.xcassets */,
 				EB5E9D531AEE9FD8008672E6 /* LaunchScreen.xib */,
 				EB5E9D491AEE9FD8008672E6 /* GitClub.xcdatamodeld */,
+				EB08726D1AF0238C001E90CA /* Persistencia */,
+				EB9AA8E31AF14383003F9057 /* Models */,
 				EB5E9D451AEE9FD8008672E6 /* Supporting Files */,
 			);
 			path = GitClub;
@@ -137,6 +139,17 @@
 				EB5E9D5F1AEE9FD8008672E6 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EB9AA8E31AF14383003F9057 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EB242EAE1AEFFC2D0065214F /* Project.swift */,
+				EB242EAC1AEFFC2D0065214F /* GitUser.swift */,
+				EB242EAA1AEFFC2D0065214F /* Label.swift */,
+				EB242EA81AEFFC2D0065214F /* Challenge.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +201,12 @@
 				TargetAttributes = {
 					EB5E9D411AEE9FD8008672E6 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = KY9XTC3U67;
+						SystemCapabilities = {
+							com.apple.DataProtection = {
+								enabled = 0;
+							};
+						};
 					};
 					EB5E9D591AEE9FD8008672E6 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -239,17 +258,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB08726C1AF02387001E90CA /* CoreDataPersistence.swift in Sources */,
 				17B45E1E1AEEB0160019685D /* ProjectViewController.swift in Sources */,
-				17B45E1C1AEEAF3B0019685D /* Persistence.swift in Sources */,
 				EB5E9D4D1AEE9FD8008672E6 /* MainViewController.swift in Sources */,
-				17B45E201AEEB0610019685D /* UserViewController.swift in Sources */,
-				EB7FC1F91AEECE0300F252C9 /* Label.swift in Sources */,
-				EB7FC1F31AEECE0200F252C9 /* User.swift in Sources */,
 				17B45E1A1AEEAF290019685D /* GitManager.swift in Sources */,
+				EB242EAB1AEFFC2D0065214F /* Label.swift in Sources */,
+				EB242EA91AEFFC2D0065214F /* Challenge.swift in Sources */,
+				EB242EAF1AEFFC2D0065214F /* Project.swift in Sources */,
 				EB5E9D4B1AEE9FD8008672E6 /* GitClub.xcdatamodeld in Sources */,
 				EB5E9D481AEE9FD8008672E6 /* AppDelegate.swift in Sources */,
-				EB7FC1F51AEECE0300F252C9 /* Project.swift in Sources */,
-				EB7FC1F71AEECE0300F252C9 /* Challenge.swift in Sources */,
+				EB242EAD1AEFFC2D0065214F /* GitUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,9 +396,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = GitClub/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -388,9 +409,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = GitClub/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

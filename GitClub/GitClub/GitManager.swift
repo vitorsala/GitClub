@@ -12,5 +12,17 @@ class GitManager{
     static let sharedInstance : GitManager = GitManager()
     private init(){}
 
+
+    func getUserInfo(username : String){
+
+        let link = "https://api.github.com/users/\(username)/repos"
+
+        let url = NSURL(string: link)
+
+        var data = NSData(contentsOfURL: url!)
+
+
+        println(data)
+    }
     
 }

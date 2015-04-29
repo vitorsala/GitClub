@@ -34,7 +34,23 @@ class MainViewController: UIViewController {
         
         self.presentViewController (alertController, animated: true, completion: nil)
 
-      
+
+        let manager = GitManager.sharedInstance
+        manager.getUserInfo("vitorsala")
+
+
+//        let per = CoreDataPersistence.sharedInstance
+//        let u = NSEntityDescription.insertNewObjectForEntityForName("GitUser", inManagedObjectContext: per.managedObjectContext!) as! GitUser
+//        u.username = "ximporinfola";
+//        per.saveContext()
+//
+//
+//        let r = per.fetchData("GitUser", predicate: NSPredicate(format: "TRUEPREDICATE")) as Array!
+//        
+//        for blablabla in r as! [GitUser]{
+//            println(blablabla.username)
+//        }
+
     }
 
     override func didReceiveMemoryWarning() {
