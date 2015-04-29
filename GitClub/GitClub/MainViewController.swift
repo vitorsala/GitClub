@@ -10,16 +10,33 @@ import UIKit
 import CoreData
 
 class MainViewController: UIViewController {
+    
+    var user: UITextField?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        let manager = GitManager.sharedInstance
+        manager.getUserInfo("vitorsala")
         
-        var user: UITextField?
+        var userDefault = NSUserDefaults()
         
+        if !userDefault.boolForKey("Access") {
+            userDefault.setBool(true, forKey: "Access")
+            alert()
+        }
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    func alert(){
         var alertController = UIAlertController(title: "Teste", message: "Oi Tudo bem?", preferredStyle: .Alert)
         
         let buttonOk: UIAlertAction = UIAlertAction(title: "OK", style: .Default) { (UIAlertAction) -> Void in
-            println("User: \(user?.text)")
+            println("User: \(self.user?.text)")
         }
         
         let buttonCancel: UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel) { (UIAlertAction) -> Void in}
@@ -29,33 +46,10 @@ class MainViewController: UIViewController {
         
         alertController.addTextFieldWithConfigurationHandler { (textField: UITextField!) -> Void in
             textField.placeholder = "User"
-            user = textField
+            self.user = textField
         }
         
         self.presentViewController (alertController, animated: true, completion: nil)
-
-
-        let manager = GitManager.sharedInstance
-        manager.getUserInfo("vitorsala")
-
-
-//        let per = CoreDataPersistence.sharedInstance
-//        let u = NSEntityDescription.insertNewObjectForEntityForName("GitUser", inManagedObjectContext: per.managedObjectContext!) as! GitUser
-//        u.username = "ximporinfola";
-//        per.saveContext()
-//
-//
-//        let r = per.fetchData("GitUser", predicate: NSPredicate(format: "TRUEPREDICATE")) as Array!
-//        
-//        for blablabla in r as! [GitUser]{
-//            println(blablabla.username)
-//        }
-
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }
 
