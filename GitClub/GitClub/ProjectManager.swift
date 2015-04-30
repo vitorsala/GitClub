@@ -19,19 +19,23 @@ class ProjectManager {
     private init(){}
 
     func newProject() -> GitClub.Project{
-        return NSEntityDescription.insertNewObjectForEntityForName(GitUserManager.entityName, inManagedObjectContext: coreData.managedObjectContext!) as! GitClub.Project
+        return NSEntityDescription.insertNewObjectForEntityForName(ProjectManager.entityName, inManagedObjectContext: coreData.managedObjectContext!) as! GitClub.Project
     }
 
-    func Project() -> Array<GitClub.Project>{
-        return coreData.fetchData(GitUserManager.entityName, predicate: NSPredicate(format: "TRUEPREDICATE")) as! Array<GitClub.Project>
+    func Project() -> Array<GitClub.Project>?{
+        return coreData.fetchData(ProjectManager.entityName, predicate: NSPredicate(format: "TRUEPREDICATE")) as? Array<GitClub.Project>
     }
 
-    func Project(predicate : NSPredicate) -> Array<GitClub.Project>{
-        return coreData.fetchData(GitUserManager.entityName, predicate: predicate) as! Array<GitClub.Project>
+    func Project(predicate : NSPredicate) -> Array<GitClub.Project>?{
+        return coreData.fetchData(ProjectManager.entityName, predicate: predicate) as? Array<GitClub.Project>
     }
 
     func save(){
         coreData.saveContext()
+    }
+
+    func delete(project: GitClub.Project){
+        coreData.managedObjectContext?.deleteObject(project)
     }
     
 }

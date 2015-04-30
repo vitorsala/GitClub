@@ -19,19 +19,23 @@ class ChallengeManager {
     private init(){}
 
     func newChallenge() -> GitClub.Challenge{
-        return NSEntityDescription.insertNewObjectForEntityForName(GitUserManager.entityName, inManagedObjectContext: coreData.managedObjectContext!) as! GitClub.Challenge
+        return NSEntityDescription.insertNewObjectForEntityForName(ChallengeManager.entityName, inManagedObjectContext: coreData.managedObjectContext!) as! GitClub.Challenge
     }
 
-    func Challenge() -> Array<GitClub.Challenge>{
-        return coreData.fetchData(GitUserManager.entityName, predicate: NSPredicate(format: "TRUEPREDICATE")) as! Array<GitClub.Challenge>
+    func Challenge() -> Array<GitClub.Challenge>?{
+        return coreData.fetchData(ChallengeManager.entityName, predicate: NSPredicate(format: "TRUEPREDICATE")) as? Array<GitClub.Challenge>
     }
 
-    func Challenge(predicate : NSPredicate) -> Array<GitClub.Challenge>{
-        return coreData.fetchData(GitUserManager.entityName, predicate: predicate) as! Array<GitClub.Challenge>
+    func Challenge(predicate : NSPredicate) -> Array<GitClub.Challenge>?{
+        return coreData.fetchData(ChallengeManager.entityName, predicate: predicate) as? Array<GitClub.Challenge>
     }
 
     func save(){
         coreData.saveContext()
+    }
+
+    func delete(project: GitClub.Challenge){
+        coreData.managedObjectContext?.deleteObject(project)
     }
 
 }

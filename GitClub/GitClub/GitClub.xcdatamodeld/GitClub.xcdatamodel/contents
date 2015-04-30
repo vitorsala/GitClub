@@ -2,26 +2,14 @@
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14D136" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Challenge" representedClassName="GitClub.Challenge" syncable="YES">
         <attribute name="challengeDescription" attributeType="String" syncable="YES"/>
-        <relationship name="hasLabel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Label" inverseName="partOfChallenge" inverseEntity="Label" syncable="YES"/>
-        <relationship name="partOfProject" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Project" inverseName="hasChallenge" inverseEntity="Project" syncable="YES"/>
-    </entity>
-    <entity name="GitUser" representedClassName="GitClub.GitUser" syncable="YES">
-        <attribute name="username" attributeType="String" syncable="YES"/>
-        <relationship name="hasProjects" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Project" inverseName="partOfUser" inverseEntity="Project" syncable="YES"/>
-    </entity>
-    <entity name="Label" representedClassName="GitClub.Label" syncable="YES">
-        <attribute name="name" attributeType="String" syncable="YES"/>
-        <relationship name="partOfChallenge" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Challenge" inverseName="hasLabel" inverseEntity="Challenge" syncable="YES"/>
+        <relationship name="partOfProject" maxCount="1" deletionRule="Nullify" destinationEntity="Project" inverseName="hasChallenge" inverseEntity="Project" syncable="YES"/>
     </entity>
     <entity name="Project" representedClassName="GitClub.Project" syncable="YES">
         <attribute name="name" attributeType="String" syncable="YES"/>
         <relationship name="hasChallenge" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Challenge" inverseName="partOfProject" inverseEntity="Challenge" syncable="YES"/>
-        <relationship name="partOfUser" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GitUser" inverseName="hasProjects" inverseEntity="GitUser" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Challenge" positionX="-567" positionY="-873" width="128" height="90"/>
-        <element name="GitUser" positionX="-162" positionY="-972" width="128" height="73"/>
-        <element name="Label" positionX="-324" positionY="-846" width="128" height="73"/>
-        <element name="Project" positionX="-360" positionY="-979" width="128" height="88"/>
+        <element name="Challenge" positionX="-414" positionY="-954" width="128" height="73"/>
+        <element name="Project" positionX="-578" positionY="-954" width="128" height="73"/>
     </elements>
 </model>
