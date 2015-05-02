@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		17B45E1A1AEEAF290019685D /* GitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B45E191AEEAF290019685D /* GitManager.swift */; };
 		17B45E1E1AEEB0160019685D /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B45E1D1AEEB0160019685D /* ProjectViewController.swift */; };
+		17D36C2F1AF2B13F0070428B /* CellLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D36C2E1AF2B13F0070428B /* CellLabels.swift */; };
 		EB08726C1AF02387001E90CA /* CoreDataPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB08726B1AF02387001E90CA /* CoreDataPersistence.swift */; };
 		EB5E9D481AEE9FD8008672E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5E9D471AEE9FD8008672E6 /* AppDelegate.swift */; };
 		EB5E9D4B1AEE9FD8008672E6 /* GitClub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EB5E9D491AEE9FD8008672E6 /* GitClub.xcdatamodeld */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		17B45E191AEEAF290019685D /* GitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitManager.swift; sourceTree = "<group>"; };
 		17B45E1D1AEEB0160019685D /* ProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
+		17D36C2E1AF2B13F0070428B /* CellLabels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellLabels.swift; sourceTree = "<group>"; };
 		EB08726B1AF02387001E90CA /* CoreDataPersistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataPersistence.swift; path = Persistencia/CoreDataPersistence.swift; sourceTree = "<group>"; };
 		EB5E9D421AEE9FD8008672E6 /* GitClub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitClub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB5E9D461AEE9FD8008672E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				EB5E9D4C1AEE9FD8008672E6 /* MainViewController.swift */,
 				EB78F54F1AF29E2700B026F2 /* TableViewCell.swift */,
 				EB5E9D4E1AEE9FD8008672E6 /* Main.storyboard */,
+				17D36C2E1AF2B13F0070428B /* CellLabels.swift */,
 				EB5E9D511AEE9FD8008672E6 /* Images.xcassets */,
 				EB5E9D531AEE9FD8008672E6 /* LaunchScreen.xib */,
 				EB5E9D491AEE9FD8008672E6 /* GitClub.xcdatamodeld */,
@@ -271,6 +274,7 @@
 				EB5E9D4B1AEE9FD8008672E6 /* GitClub.xcdatamodeld in Sources */,
 				EB5E9D481AEE9FD8008672E6 /* AppDelegate.swift in Sources */,
 				EB78F54A1AF273C800B026F2 /* Project.swift in Sources */,
+				17D36C2F1AF2B13F0070428B /* CellLabels.swift in Sources */,
 				EB78F54C1AF273C800B026F2 /* Challenge.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

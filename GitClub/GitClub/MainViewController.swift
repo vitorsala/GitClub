@@ -30,6 +30,9 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         if username == nil {
             alert()
         }
+        else{
+            data = ProjectManager.sharedInstance.Project()!
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,10 +40,13 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func changeUser(sender: AnyObject) {
+        alert()
+    }
     @IBAction func forceUpdate(){
         GitManager.sharedInstance.getUserInfo(self.username!)
     }
-
+    
     func reloadGitRepositories(notification : NSNotification){
         var data: Dictionary<String, Array<String>>? = notification.userInfo as? [String : Array<String>]
 
@@ -93,13 +99,15 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
 
     func alert(){
-        var alertController = UIAlertController(title: "Teste", message: "Oi Tudo bem?", preferredStyle: .Alert)
+        var alertController = UIAlertController(title: "Usuário", message: nil, preferredStyle: .Alert)
         
         let buttonOk: UIAlertAction = UIAlertAction(title: "OK", style: .Default) { (UIAlertAction) -> Void in
 //            println("User: \(self.user?.text)")
             NSUserDefaults().setObject(self.user?.text, forKey: "username")
             self.username = self.user?.text
+            ProjectManager.sharedInstance.deleteAll()
             println(self.username)
+            self.forceUpdate()
         }
         
         let buttonCancel: UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel) { (UIAlertAction) -> Void in}
@@ -108,7 +116,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         alertController.addAction(buttonCancel)
         
         alertController.addTextFieldWithConfigurationHandler { (textField: UITextField!) -> Void in
-            textField.placeholder = "User"
+            textField.placeholder = "Usuário GitHub"
             self.user = textField
         }
         
@@ -131,5 +139,13 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "showProjectInfo"){
+            let toVC : ProjectViewController = segue.destinationViewController as! ProjectViewController
+            toVC.repoName = (sender as! TableViewCell).lblNome.text
+        }
+    }
 }
 
+    

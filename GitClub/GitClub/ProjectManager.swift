@@ -38,4 +38,13 @@ class ProjectManager {
         coreData.managedObjectContext?.deleteObject(project)
     }
     
+    func deleteAll(){
+        let allObjects : Array<GitClub.Project> = self.Project()!
+        
+        for item : GitClub.Project in allObjects as Array<GitClub.Project> {
+            self.delete(item)
+        }
+        
+    }
+    
 }
