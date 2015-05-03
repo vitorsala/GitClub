@@ -15,6 +15,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var loadingView: UIVisualEffectView!
     @IBOutlet weak var acitivyIndicator: UIActivityIndicatorView!
 
+    @IBOutlet weak var test: UIView!
+
     var user: UITextField?
     var username: String?
     var data : Array<Project>?
@@ -33,6 +35,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             userInputAlert()
         }
         else{
+            println(username)
             data = ProjectManager.sharedInstance.Project()!
         }
     }
@@ -45,12 +48,14 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     func showLoading(){
         self.loadingView.hidden = false
+        self.test.hidden = false
         self.acitivyIndicator.startAnimating()
     }
 
     func hideLoading(){
-        self.loadingView.hidden = true
         self.acitivyIndicator.stopAnimating()
+        self.test.hidden = true
+        self.loadingView.hidden = true
     }
 
     @IBAction func changeUser(sender: AnyObject) {
@@ -59,7 +64,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     @IBAction func forceUpdate(){
         println("update")
-
+        self.tableView.userInteractionEnabled = false
         self.showLoading()
         GitManager.sharedInstance.getUserInfo(self.username!)
     }
@@ -75,6 +80,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         let projMan : ProjectManager = ProjectManager.sharedInstance
         let chalMan : ChallengeManager = ChallengeManager.sharedInstance
         self.data = []
+        projMan.deleteAll()
 
         if(gitData != nil){
             let projectList : Array = gitData!["result"] as! Array<Dictionary<String,AnyObject>>
@@ -126,9 +132,16 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
 
         }
-        self.hideLoading()
-        self.data = projMan.Project()
-        self.tableView.reloadData()
+        projMan.save()
+
+        dispatch_sync(dispatch_get_main_queue(), { () -> Void in
+            self.data = projMan.Project()
+            self.tableView.reloadData()
+            self.hideLoading()
+            self.tableView.userInteractionEnabled = true
+        })
+
+        println("updated")
     }
 
     func userInputAlert(){
@@ -136,9 +149,9 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 
         let buttonOk: UIAlertAction = UIAlertAction(title: "OK", style: .Default) { (UIAlertAction) -> Void in
 //            println("User: \(self.user?.text)")
-            NSUserDefaults().setObject(self.user?.text, forKey: "username")
             self.username = self.user?.text
             ProjectManager.sharedInstance.deleteAll()
+            NSUserDefaults().setObject(self.username, forKey: "username")
             println(self.username)
             self.forceUpdate()
         }

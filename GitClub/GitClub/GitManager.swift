@@ -55,10 +55,10 @@ class GitManager{
 
             var resultArray : Array<Dictionary<String,AnyObject>> = []
 
-            for userInfo in parseUser{
-                let repoName = userInfo["name"] as! String
-                if (userInfo["fork"] as! Bool){
-                    let repoUrl : String! = (userInfo["url"] as! String)+key
+            for userRepo in parseUser{
+                let repoName = userRepo["name"] as! String
+                if (userRepo["fork"] as! Bool){
+                    let repoUrl : String! = (userRepo["url"] as! String)+key
                     let urlMack = NSURL(string: repoUrl)
                     let dataMack = NSData(contentsOfURL: urlMack!)
 
@@ -83,8 +83,11 @@ class GitManager{
                         let parseRepo = NSJSONSerialization.JSONObjectWithData(dataRepo!, options: NSJSONReadingOptions.MutableContainers, error: &parseErro) as! NSArray
 
                         for issue in parseRepo{
+                            let creationDate = userRepo["created_at"] as! String
 
                             var repos : Dictionary<String,AnyObject> = ["name":repoName]
+                            repos["date"] = creationDate
+
                             var labelList : Array<Dictionary<String,String>> = []
                             for labels in issue["labels"] as! NSArray{
                                 var formatedLabel : Dictionary<String,String> = [:]
