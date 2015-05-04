@@ -29,7 +29,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "reloadGitRepositories:", name: "updateDidFinished", object: nil)
 
-        var userDefault = NSUserDefaults()
+        let userDefault = NSUserDefaults()
         username = userDefault.objectForKey("username") as? String
         if username == nil {
             userInputAlert()
@@ -64,9 +64,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     @IBAction func forceUpdate(){
         println("update")
-        self.tableView.userInteractionEnabled = false
         self.showLoading()
-        GitManager.sharedInstance.getUserInfo(self.username!)
+        GitManager.sharedInstance.checkGitRepositories(self.username!)
     }
 
     /**
@@ -76,69 +75,10 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     */
     func reloadGitRepositories(notification : NSNotification){
 
-        let gitData = (notification.userInfo as? [String : AnyObject])
-        let projMan : ProjectManager = ProjectManager.sharedInstance
-        let chalMan : ChallengeManager = ChallengeManager.sharedInstance
-        self.data = []
-        projMan.deleteAll()
-
-        if(gitData != nil){
-            let projectList : Array = gitData!["result"] as! Array<Dictionary<String,AnyObject>>
-
-            for projectData in projectList{
-
-                var project : Project?
-
-                let projectName = projectData["name"] as! String
-
-                let projectResult = projMan.Project(NSPredicate(format: "name = '\(projectName)'"))
-
-                var challenge : Challenge?
-                var challengeResult : NSSet?
-                if projectResult == nil || projectResult?.count == 0{
-                    project = projMan.newProject()
-                    project!.name = projectName
-                }
-                else{
-                    project = projectResult?.first
-                    challengeResult = project?.hasChallenge
-                }
-
-                let challengeList : Array = projectData["labels"] as! Array<Dictionary<String,AnyObject>>
-
-                for challengeData in challengeList{
-
-                    if(challengeResult != nil && challengeResult?.count > 0){
-                        var isPresent = false
-                        for c : Challenge in challengeResult!.allObjects as! Array<Challenge>{
-                            if c.challengeDescription == challengeData["name"] as! String{
-                                isPresent = true
-                            }
-                        }
-                        if(!isPresent){
-                            let temp = chalMan.newChallenge()
-                            temp.challengeDescription = challengeData["name"] as! String
-                            project?.addChallenge(temp)
-                        }
-                    }
-                    else{
-                        let temp = chalMan.newChallenge()
-                        temp.challengeDescription = challengeData["name"] as! String
-                        project?.addChallenge(temp)
-                    }
-
-                }
-
-            }
-
-        }
-        projMan.save()
-
         dispatch_sync(dispatch_get_main_queue(), { () -> Void in
-            self.data = projMan.Project()
+            self.data = ProjectManager.sharedInstance.Project()
             self.tableView.reloadData()
             self.hideLoading()
-            self.tableView.userInteractionEnabled = true
         })
 
         println("updated")
@@ -148,11 +88,10 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         var alertController = UIAlertController(title: "Usuário", message: nil, preferredStyle: .Alert)
 
         let buttonOk: UIAlertAction = UIAlertAction(title: "OK", style: .Default) { (UIAlertAction) -> Void in
-//            println("User: \(self.user?.text)")
             self.username = self.user?.text
             ProjectManager.sharedInstance.deleteAll()
             NSUserDefaults().setObject(self.username, forKey: "username")
-            println(self.username)
+            ProjectManager.sharedInstance.deleteAll()
             self.forceUpdate()
         }
         

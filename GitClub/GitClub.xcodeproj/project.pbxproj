@@ -23,6 +23,7 @@
 		EB78F5501AF29E2700B026F2 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB78F54F1AF29E2700B026F2 /* TableViewCell.swift */; };
 		EB9AA8E71AF14F33003F9057 /* ProjectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9AA8E61AF14F33003F9057 /* ProjectManager.swift */; };
 		EB9AA8EB1AF14FE0003F9057 /* ChallengeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9AA8EA1AF14FE0003F9057 /* ChallengeManager.swift */; };
+		EBBA86361AF6E5CC00E06E4E /* BackgroundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBA86351AF6E5CC00E06E4E /* BackgroundManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		EB78F54F1AF29E2700B026F2 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		EB9AA8E61AF14F33003F9057 /* ProjectManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectManager.swift; sourceTree = "<group>"; };
 		EB9AA8EA1AF14FE0003F9057 /* ChallengeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeManager.swift; sourceTree = "<group>"; };
+		EBBA86351AF6E5CC00E06E4E /* BackgroundManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				EB78F54F1AF29E2700B026F2 /* TableViewCell.swift */,
 				EB5E9D4E1AEE9FD8008672E6 /* Main.storyboard */,
 				17D36C2E1AF2B13F0070428B /* CellLabels.swift */,
+				EBBA86351AF6E5CC00E06E4E /* BackgroundManager.swift */,
 				EB5E9D511AEE9FD8008672E6 /* Images.xcassets */,
 				EB5E9D531AEE9FD8008672E6 /* LaunchScreen.xib */,
 				EB5E9D491AEE9FD8008672E6 /* GitClub.xcdatamodeld */,
@@ -209,6 +212,9 @@
 						CreatedOnToolsVersion = 6.3.1;
 						DevelopmentTeam = KY9XTC3U67;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.DataProtection = {
 								enabled = 0;
 							};
@@ -271,6 +277,7 @@
 				17B45E1A1AEEAF290019685D /* GitManager.swift in Sources */,
 				EB9AA8EB1AF14FE0003F9057 /* ChallengeManager.swift in Sources */,
 				EB78F5501AF29E2700B026F2 /* TableViewCell.swift in Sources */,
+				EBBA86361AF6E5CC00E06E4E /* BackgroundManager.swift in Sources */,
 				EB5E9D4B1AEE9FD8008672E6 /* GitClub.xcdatamodeld in Sources */,
 				EB5E9D481AEE9FD8008672E6 /* AppDelegate.swift in Sources */,
 				EB78F54A1AF273C800B026F2 /* Project.swift in Sources */,
